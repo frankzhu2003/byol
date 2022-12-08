@@ -1,5 +1,8 @@
 # byol
 
+# Central Control Plane for Observability
+<p align="center"><img src="/image/fluentd.png" width="40%" alt="Fluentd Logo" /></p>
+
 ## Prerequisite
 The following tools need to be install on your machine :
 - K8s
