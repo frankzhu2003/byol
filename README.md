@@ -38,6 +38,14 @@ kubectl apply -f petclinic/petclinic.yaml
 kubectl apply -f petclinic/ingress_petclinic.yaml
 ```
 
+### 2. Install Loki
+#### Install Loki with Promtail
+```
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+helm upgrade --install loki grafana/loki-stack
+```
+
 ###  Install the Fluentd
 ```
 kubectl apply -f fluentd/service_account.yaml    
