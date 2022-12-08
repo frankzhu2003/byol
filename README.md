@@ -7,7 +7,7 @@ The following tools need to be install on your machine :
 
 
 
-###  Install the ngninx controller
+###  Install the ngninx ingress controller
 ```
 helm repo add nginx-stable https://helm.nginx.com/stable
 helm install ngninx nginx-stable/nginx-ingress --set controller.enableLatencyMetrics=true --set prometheus.create=true --set controller.config.name=nginx-config
