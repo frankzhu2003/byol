@@ -55,6 +55,11 @@ helm repo update
 helm upgrade --install loki grafana/loki-stack
 ```
 
+#### Configure Grafana
+In order to build a dashboard with data stored in Loki,we first need to add a new DataSource.
+In grafana, goto Configuration/Add data source.
+Select the source Loki , and configure the url to interact with it.
+
 ### 5. Install the Fluentd
 ```
 kubectl apply -f fluentd/service_account.yaml    
