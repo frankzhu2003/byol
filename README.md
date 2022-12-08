@@ -7,6 +7,8 @@
 
 <p align="center"><img src="/image/dashboard.png" width="100%" alt="Dashboard Logo" /></p>
 
+<p align="center"><img src="/image/chrono.png" width="100%" alt="Chrono Logo" /></p>
+
 ## Prerequisite
 The following tools need to be install on your machine :
 - K8s
