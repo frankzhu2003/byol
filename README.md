@@ -1,5 +1,11 @@
 # byol
 
+## Prerequisite
+The following tools need to be install on your machine :
+- K8s
+- Chronosphere Collector (optional)
+- Prometheus Operator https://github.com/prometheus-operator/prometheus-operator
+
 
 
 ###  Install the ngninx controller
