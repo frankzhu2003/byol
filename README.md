@@ -5,6 +5,8 @@
 
 <p align="center"><img src="/image/loki.png" width="40%" alt="Grafana Logo" /></p>
 
+<p align="center"><img src="/image/dashboard.png" width="40%" alt="Dashboard Logo" /></p>
+
 ## Prerequisite
 The following tools need to be install on your machine :
 - K8s
