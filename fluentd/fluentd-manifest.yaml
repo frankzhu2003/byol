@@ -108,7 +108,7 @@ spec:
         app: fluentd-pipeline
         version: v1
     spec:
-      serviceAccountName: dynatrace-monitoring
+      serviceAccountName: chronosphere-monitoring
       tolerations:
         - key: node-role.kubernetes.io/master
           effect: NoSchedule
@@ -121,7 +121,7 @@ spec:
             mountPath: /var/log/
       containers:
       - name: fluentd
-        image: hrexed/fluentd_dynatrace_prometheus:0.1
+        image: frankzhu2003/fluentd_byol_prometheus:v1.14.3
         ports:
           - containerPort: 9914
             name: fluentdprom
@@ -136,23 +136,6 @@ spec:
             memory: 200Mi
             ephemeral-storage: 10Gi
         env:
-          - name: FLUENT_UID
-            value: "0"
-          - name: CLUSTER_ID
-            valueFrom:
-              configMapKeyRef:
-                name: fluentd-conf
-                key: CLUSTER_ID
-          - name: AG_INGEST_URL
-            valueFrom:
-              configMapKeyRef:
-                name: fluentd-conf
-                key: AG_INGEST_URL
-          - name: LOG_INGEST_TOKEN
-            valueFrom:
-              secretKeyRef:
-                name: tokens
-                key: log-ingest
         volumeMounts:
           - name: var-log
             mountPath: /var/log
