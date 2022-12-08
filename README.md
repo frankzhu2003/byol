@@ -1,7 +1,9 @@
 # byol
 
-# Central Control Plane for Observability
+## Central Control Plane for Observability
 <p align="center"><img src="/image/fluentd.png" width="40%" alt="Fluentd Logo" /></p>
+
+<p align="center"><img src="/image/loki.png" width="40%" alt="Grafana Logo" /></p>
 
 ## Prerequisite
 The following tools need to be install on your machine :
@@ -52,6 +54,11 @@ helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
 helm upgrade --install loki grafana/loki-stack
 ```
+
+#### Configure Grafana
+In order to build a dashboard with data stored in Loki,we first need to add a new DataSource.
+In grafana, goto Configuration/Add data source.
+Select the source Loki , and configure the url to interact with it.
 
 ### 5. Install the Fluentd
 ```
