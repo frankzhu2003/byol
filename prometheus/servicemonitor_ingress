@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: ngninx-exporter
+  name: nginx-prom-metrics
+  annotations:
+    prometheus.io/scrape: 'true'
+    prometheus.io/scheme: 'http'
+    prometheus.io/port: '9113'
+    prometheus.io/path: '/metrics'
+spec:
+  type: ClusterIP
+  ports:
+    - port: 9113
+      name: prometheus
+      protocol: TCP
+  selector:
+    app: ngninx-nginx-ingress
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: nginx-servicemon
+  labels:
+    release: prometheus
+spec:
+  endpoints:
+    - interval: 5s
+      port: prometheus
+  selector:
+    matchLabels:
+      app: ngninx-exporter
