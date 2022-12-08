@@ -37,6 +37,10 @@ helm install [RELEASE_NAME] prometheus-community/kube-prometheus-stack
 kubectl apply -f petclinic/petclinic.yaml    
 kubectl apply -f petclinic/ingress_petclinic.yaml
 ```
+Deploy the servicemonitor:
+```
+kubectl apply -f prometheus/servicemonitor_ingress.yaml    
+```
 
 ### 2. Install Loki
 #### Install Loki with Promtail
@@ -50,5 +54,9 @@ helm upgrade --install loki grafana/loki-stack
 ```
 kubectl apply -f fluentd/service_account.yaml    
 kubectl apply -f fluentd/fluentd-manifest.yaml
+```
+Deploy the servicemonitor:
+```
+kubectl apply -f prometheus/servicemonitor_fluentd.yaml    
 ```
 
