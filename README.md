@@ -64,6 +64,9 @@ helm upgrade --install loki grafana/loki-stack
 ```
 
 #### Configure Grafana
+```
+kubectl apply -f grafana/ingress_grafana.yaml    
+```
 In order to build a dashboard with data stored in Loki,we first need to add a new DataSource.
 In grafana, goto Configuration/Add data source.
 Select the source Loki , and configure the url to interact with it.
@@ -76,5 +79,12 @@ kubectl apply -f fluentd/fluentd-manifest.yaml
 Deploy the servicemonitor:
 ```
 kubectl apply -f prometheus/servicemonitor_fluentd.yaml    
+```
+
+### 6. Add hostnames to /etc/hosts
+```
+127.0.0.1	grafana.local
+127.0.0.1	petclinic.local
+127.0.0.1	prometheus.local
 ```
 
