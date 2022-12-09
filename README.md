@@ -1,4 +1,4 @@
-# byol
+# byol (WIP)
 
 This demo is focusing on generating log derived metrics from a free format of log. In this case, we are using nginx.log as an example. However, the same exact approach can be applied to "any" free format application or system logs. 
 
