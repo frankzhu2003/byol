@@ -1,5 +1,7 @@
 # byol
 
+This demo is focusing on generating log derived metrics from a free format of log. In this case, we are using nginx.log as an example. However, the same exact approach can be applied to -any- free format logs. 
+
 ## Central Control Plane for Observability
 <p align="center"><img src="/image/fluentd.png" width="100%" alt="Fluentd Logo" /></p>
 
