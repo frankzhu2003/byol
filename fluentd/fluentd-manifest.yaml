@@ -8,7 +8,6 @@ metadata:
     component: fluentd-conf
 data:
   CLUSTER_ID: "5fef1a1b-1d17-476d-b930-47227e26bacd"
-  AG_INGEST_URL: "https://fluentd-activegate:9999/e/bix24852/api/v2/logs/ingest"
   fluent.conf: |-
     # Ingest logs from nodes
     <match fluent.**>
@@ -49,7 +48,7 @@ data:
         ingressnamespace ${ressource_namesapce}
         targetservice ${service}
         ressourcename ${ressourcename}
-        log_URL "https://console.cloud.google.com/logs/query;query=resource.labels.service_name%3D%22demo-logger%22%0AjsonPayload.message%3D%22request%20handled%22;timeRange=PT3H;cursorTimestamp=${__value.time}?project=chronosphere-test&pli=1&rapt=AEjHL4OGt1flkDcu9Ii3SHHuPBA3lBj7zAXJ3ce91KEADXZ4WgqtWXbDD4ry4afFqgFAEYLH6Epx8g3lUgtbUS4nPnyuZnQkJg"
+        log_URL "location:cluster:service:logname"
       </labels>
       <metric>
         name ingress_response_time
