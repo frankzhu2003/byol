@@ -1,4 +1,8 @@
-# byol
+# byol (WIP)
+
+This demo is focusing on generating log derived metrics from a free format log. In this case, we are using nginx.log as an example. However, the same exact approach can be applied to "any" free format application or system logs. 
+
+This provides a new perspective to manage log volume effectively, which you can choose to send "important" log to different destination while keep the rest locally. Optionally, log location can be sent with metrics as part of the tags. 
 
 ## Central Control Plane for Observability
 <p align="center"><img src="/image/fluentd.png" width="100%" alt="Fluentd Logo" /></p>
@@ -60,6 +64,9 @@ helm upgrade --install loki grafana/loki-stack
 ```
 
 #### Configure Grafana
+```
+kubectl apply -f grafana/ingress_grafana.yaml    
+```
 In order to build a dashboard with data stored in Loki,we first need to add a new DataSource.
 In grafana, goto Configuration/Add data source.
 Select the source Loki , and configure the url to interact with it.
@@ -72,5 +79,12 @@ kubectl apply -f fluentd/fluentd-manifest.yaml
 Deploy the servicemonitor:
 ```
 kubectl apply -f prometheus/servicemonitor_fluentd.yaml    
+```
+
+### 6. Add hostnames to /etc/hosts
+```
+127.0.0.1	grafana.local
+127.0.0.1	petclinic.local
+127.0.0.1	prometheus.local
 ```
 
