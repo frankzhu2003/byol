@@ -9,9 +9,9 @@ This provides a new perspective to manage log volume effectively, which you can 
 
 <p align="center"><img src="/image/loki.png" width="100%" alt="Grafana Logo" /></p>
 
-<p align="center"><img src="/image/dashboard.png" width="100%" alt="Dashboard Logo" /></p>
+<p align="center"><img src="/image/dashboard_grafana.png" width="100%" alt="Dashboard Logo" /></p>
 
-<p align="center"><img src="/image/chrono.png" width="100%" alt="Chrono Logo" /></p>
+<p align="center"><img src="/image/dashboard_chrono.png" width="100%" alt="Chrono Logo" /></p>
 
 ### Prerequisite
 The following tools need to be installed on your machine :
