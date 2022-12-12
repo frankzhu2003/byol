@@ -1,6 +1,6 @@
 # byol (WIP)
 
-This demo is focusing on generating log derived metrics from a free format log. In this case, we are using nginx.log as an example. However, the same exact approach can be applied to "any" free format application or system logs. 
+This demo is focusing on generating log derived metrics from a free form log. In this case, we are using nginx.log as an example. However, the same exact approach can be applied to <b>ANY</b> free form application or system logs. 
 
 This provides a new perspective to manage log volume effectively, which you can choose to send "important" log to different destination while keep the rest locally. Optionally, log location can be sent with metrics as part of the tags. 
 
@@ -13,12 +13,10 @@ This provides a new perspective to manage log volume effectively, which you can 
 
 <p align="center"><img src="/image/chrono.png" width="100%" alt="Chrono Logo" /></p>
 
-## Prerequisite
+### Prerequisite
 The following tools need to be installed on your machine :
 - K8s
 - Chronosphere Collector (optional)
-
-
 
 ### 1. Install the ngninx ingress controller
 ```
@@ -42,7 +40,7 @@ data:
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
-helm install [RELEASE_NAME] prometheus-community/kube-prometheus-stack
+helm install prometheus prometheus-community/kube-prometheus-stack
 ```
 
 ### 3. Install the Spring Petclinic application
