@@ -13,12 +13,10 @@ This provides a new perspective to manage log volume effectively, which you can 
 
 <p align="center"><img src="/image/chrono.png" width="100%" alt="Chrono Logo" /></p>
 
-## Prerequisite
+### Prerequisite
 The following tools need to be installed on your machine :
 - K8s
 - Chronosphere Collector (optional)
-
-
 
 ### 1. Install the ngninx ingress controller
 ```
