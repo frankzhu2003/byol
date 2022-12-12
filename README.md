@@ -1,6 +1,6 @@
 # byol (WIP)
 
-This demo is focusing on generating log derived metrics from a free format log. In this case, we are using nginx.log as an example. However, the same exact approach can be applied to "any" free format application or system logs. 
+This demo is focusing on generating log derived metrics from a free form log. In this case, we are using nginx.log as an example. However, the same exact approach can be applied to <b>any</b> free form application or system logs. 
 
 This provides a new perspective to manage log volume effectively, which you can choose to send "important" log to different destination while keep the rest locally. Optionally, log location can be sent with metrics as part of the tags. 
 
