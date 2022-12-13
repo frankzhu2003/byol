@@ -37,15 +37,10 @@ data:
 ```
 
 ### 2. Install the Kube-prometheus
-
-Clone the repo: https://github.com/prometheus-operator/kube-prometheus
 ```
-kubectl apply --server-side -f manifests/setup
-kubectl wait \
-	--for condition=Established \
-	--all CustomResourceDefinition \
-	--namespace=monitoring
-kubectl apply -f manifests/
+git clone prometheus-operator/kube-prometheus
+
+./scripts/monitoring-deploy.sh
 ```
 
 ### 3. Install the Spring Petclinic application
