@@ -36,11 +36,11 @@ data:
   log-format: $remote_addr [$time_local] "$request" $status $body_bytes_sent $request_time $upstream_addr $upstream_response_time $proxy_host $upstream_status $resource_name $resource_type $resource_namespace $service
 ```
 
-### 2. Install the Prometheus Operator
+### 2. Install the Kube-prometheus
 ```
-helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm repo update
-helm install prometheus prometheus-community/kube-prometheus-stack
+git clone prometheus-operator/kube-prometheus
+cd kube-prometheus
+./scripts/monitoring-deploy.sh
 ```
 
 ### 3. Install the Spring Petclinic application
