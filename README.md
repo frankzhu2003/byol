@@ -39,7 +39,7 @@ data:
 ### 2. Install the Kube-prometheus
 ```
 git clone prometheus-operator/kube-prometheus
-
+cd kube-prometheus
 ./scripts/monitoring-deploy.sh
 ```
 
