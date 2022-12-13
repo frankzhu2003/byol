@@ -38,7 +38,7 @@ data:
 
 ### 2. Install the Kube-prometheus
 
-https://github.com/prometheus-operator/kube-prometheus
+Clone the repo: https://github.com/prometheus-operator/kube-prometheus
 ```
 kubectl apply --server-side -f manifests/setup
 kubectl wait \
