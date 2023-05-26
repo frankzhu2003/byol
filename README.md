@@ -59,7 +59,7 @@ data:
 
 ### 2. Install the Kube-prometheus
 
-https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+[Kube-rpmetheus](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) is required to support the servicemonitor
 
 
 ### 3. Install the Spring Petclinic application
