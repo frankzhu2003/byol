@@ -58,11 +58,9 @@ data:
 ```
 
 ### 2. Install the Kube-prometheus
-```
-git clone prometheus-operator/kube-prometheus
-cd kube-prometheus
-./scripts/monitoring-deploy.sh
-```
+
+https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+
 
 ### 3. Install the Spring Petclinic application
 ```
