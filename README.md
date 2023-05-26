@@ -34,6 +34,27 @@ add the following line:
 ```yaml
 data:
   log-format: $remote_addr [$time_local] "$request" $status $body_bytes_sent $request_time $upstream_addr $upstream_response_time $proxy_host $upstream_status $resource_name $resource_type $resource_namespace $service
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    meta.helm.sh/release-name: ngninx
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2023-05-26T15:54:28Z"
+  labels:
+    app.kubernetes.io/instance: ngninx
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: nginx-ingress
+    app.kubernetes.io/version: 3.1.1
+    helm.sh/chart: nginx-ingress-0.17.1
+  name: nginx-config
+  namespace: default
+  resourceVersion: "4654"
+  uid: 895a6e0e-8190-4efc-9c6b-4499b2618042
+data:
+  log-format: $remote_addr [$time_local] "$request" $status $body_bytes_sent $request_time $upstream_addr $upstream_response_time $proxy_host $upstream_status $resource_name $resource_type $resource_namespace $service
 ```
 
 ### 2. Install the Kube-prometheus
