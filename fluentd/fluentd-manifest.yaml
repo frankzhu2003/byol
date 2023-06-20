@@ -63,7 +63,7 @@ data:
         key bytes_sent
       </metric>
       <metric>
-        name ingress_requests
+        name ingress_requests_total
         type counter
         desc The total number of request
       </metric>
